@@ -1,0 +1,72 @@
+ 
+<html>
+  <head>
+    <title>Geometric Shape Identifier</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Charm:wght@700&family=Rochester&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+  <div class="container">
+  
+    <center>
+
+      <br><br>
+
+      <p class="btn-grad-2">Show a shape, identify a shape. </p>
+      	<br>
+        <b style="color: yellow">Is it a Circle??</b>
+        <br>
+        <b style="color: blue">Is it a Square?? &#x25A1;</b>
+        <br>
+        <b style="color: darkgreen;">Is it a Triangle??</b>
+        <br>
+    
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+      <label > Webcam View -- </label>
+      <div id="camera" >
+
+      </div>
+      <button id="capture_image"  class="btn-grad" onclick="take_snapshot()">  Capture Image </button>
+    </div>
+
+
+      <div id="predict" class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+<label> Prediction - 1</label>
+<p id="shape_name"></p>
+<p id="shape_emoji"></p>
+
+<label> Prediction - 2</label>
+<p id="shape_name_2"></p>
+<p id="shape_emoji_2"></p>
+      </div>
+
+      
+      <div  class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <label > Snapshot View -- </label>
+        <div id="result">
+
+        </div>
+        <button id="identify_image" class="btn-grad" onclick="check()"> Identify Image </button>
+      </div>
+
+
+    </center>
+
+  </div>
+
+<script src="main.js"></script>
+
+  </body>
+</html>
+
+ 
